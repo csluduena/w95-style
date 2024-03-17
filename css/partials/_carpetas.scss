@@ -84,6 +84,10 @@
     background: #FFFFFF;
     height: calc(100% - 52px);
     padding: 2px;
+    box-shadow: -1px -1px 1px #949593, 2px 2px 2px #989a95;
+    color: black;
+    border-radius: 2px;
+    border: 1px solid #afb1ae;
 }
 
 .status-bar {

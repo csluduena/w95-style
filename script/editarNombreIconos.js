@@ -4,6 +4,7 @@ let nombresPredeterminados = {
     'textMyPc': 'My Computer',
     'textDocumentos': 'My Documents',
     'textCV': 'Resume.txt',
+    'mp3Text': 'mp3',
     'winampText': 'Winamp',
     'papeleraText': 'Recycle Bin'
 };

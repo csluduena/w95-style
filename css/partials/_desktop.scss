@@ -29,6 +29,10 @@
         background-position: center;
         }
 
+//TODO ********************************************************************************************************************************
+//TODO ********************************* AGREGAR CARPETAS QUE SE CREEN ACA Y EN editarNombreIconos.js *********************************
+//TODO ********************************************************************************************************************************
+
 //! ORGANIZAR ÍCONOS AUTOMATICAMENTE SEGUN LA VARIABLE DE LOS ÍCOONOS CREADOS
 .desktop {
     display: flex;
@@ -70,10 +74,11 @@
     background-position: center;
 }
 
-.papelera {
-    background-image: url('../img/desktopIcons/recycle_bin_empty.png');
+.mp3{
+    background-image: url('../img/desktopIcons/cxcc.png');
     background-repeat: no-repeat;
     cursor:pointer;
+    background-size: 48px 48px; /* Ajusta el tamaño de la imagen de fondo */
     height: 48px;
     background-position: center;
 }
@@ -87,8 +92,15 @@
     height: 48px; /* Asegúrate de que el elemento tenga el tamaño adecuado */
 }
 
+.papelera {
+    background-image: url('../img/desktopIcons/recycle_bin_empty.png');
+    background-repeat: no-repeat;
+    cursor:pointer;
+    height: 48px;
+    background-position: center;
+}
 
-.textMyPc, .textDocumentos, .textCV, .papeleraText, .winampText {
+.defaultText, .textMyPc, .textDocumentos, .textCV, .papeleraText, .winampText, .textMp3 {
     text-align: center;
     background-color: #007E73;
     color: white;

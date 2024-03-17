@@ -8,4 +8,3 @@ document.getElementById('winamp').addEventListener('dblclick', function(event) {
 
 //! Archivos MP3
 
-webamp.setTracks([{ url: '../mp3/Stiff Upper Lip - AcDc.mp3'}]);
