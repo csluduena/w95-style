@@ -1,0 +1,98 @@
+//! C A R P E T A S
+.window {
+    position: absolute;
+    width: 640px;
+    height: 480px;
+    background: #C0C0C0;
+    padding-top: 4px;
+    padding-left: 6px;
+    padding-right: 6px;
+    font-family: 'MS Sans Serif', sans-serif;
+    top: 4rem;
+    left: 15rem;
+    min-width: 230px; /* Mínimo ancho */
+    min-height: 110px; /* Mínimo alto */
+    box-shadow: -1px -1px 1px #ffffff, 2px 2px 2px #575757;
+    color: black;
+}
+//! APLICAR "window resizable" a la carpeta que quiera que se pueda resizear.
+.resizable {
+    resize: both;
+    overflow: auto;
+}
+
+.ocultar {
+    display: none;
+}
+
+.title-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #787a74;
+    color: #FFF;
+    padding: 2px;
+}
+
+.title-bar .title {
+    margin-left: 2px;
+}
+
+.title-bar .buttons {
+    display: flex;
+}
+
+.title-bar .buttons button {
+    width: 20px;
+    height: 20px;
+    border: none;
+    color: #000;
+    background: #C0C0C0;
+}
+
+.menu-bar {
+    background: #C0C0C0;
+    padding: 2px;
+}
+
+.menu-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.minimize {
+    font-size: 18px;
+}
+
+.maximize {
+    font-size: 17px;
+    margin-left: 3px;
+}
+
+.close {
+    font-size: 18px;
+    margin-left: 3px;
+}
+
+.menu-bar ul li {
+    margin-right: 4px;
+}
+
+.content {
+    background: #FFFFFF;
+    height: calc(100% - 52px);
+    padding: 2px;
+}
+
+.status-bar {
+    background: #C0C0C0;
+    padding: 2px;
+}
+
+//! Config Maximizar, Minimizar, cerrar de ventana.
+.title-bar .buttons button {
+    cursor: pointer;
+    top:0;
+}

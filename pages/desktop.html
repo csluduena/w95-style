@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desktop</title>
+    <link rel="stylesheet" href="../css/styles.css">
+
+</head>
+<body class="desktopbgn">
+    <header>
+        <!--Header Area-->
+    </header>
+    
+    <main>
+        <!--Main Area-->
+        <!--! web winamp -->
+        <div id="app" class="winamPosition"></div>
+        
+        <div id="tasktabindex" class="tasktabindex">
+            <table class="table-Index">
+                <tr class="mouseConfig">
+                    <td class="iconprograms"></td>
+                    <td class="programs">Programs</td>
+                    <td>></td>
+                </tr>
+                <tr class="mouseConfig">
+                    <td class="icondocuments"></td>
+                    <td class="documents">Documents</td>
+                    <td>></td>
+                </tr>
+                <tr class="mouseConfig">
+                    <td class="iconsettings"></td>
+                    <td class="settings">Settings</td>
+                    <td></td>
+                </tr>
+                <tr class="mouseConfig">
+                    <td class="iconfind"></td>
+                    <td class="find">Find</td>
+                    <td>></td>
+                </tr>
+                <tr class="mouseConfig">
+                    <td class="iconhelp"></td>
+                    <td class="help">Help</td>
+                    <td></td>
+                </tr>
+                <tr class="mouseConfig">
+                    <td class="iconrun"></td>
+                    <td class="run">Run</td>
+                    <td></td>
+                </tr>
+                <tr class="mouseConfig">
+                    <td class="iconsuspend"></td>
+                    <td class="suspend">Suspend</td>
+                    <td></td>
+                </tr>
+                <tr class="mouseConfig">
+                    <td class="iconshutDown"></td>
+                    <td class="shutDown">Shut Down</td>
+                    <td></td>
+                </tr> 
+            </table>
+        </div>
+
+        <!--! Iconos del Escritorio -->
+        <div class="desktop">
+            <div class="icon folder" id="myPC">
+                <div class="icon-content">
+                    <div class="myPC"></div>
+                    <p class="editable textMyPc">My Computer</p>
+                </div>
+            </div>
+            <div class="icon folder" id="documentos">
+                <div class="icon-content">
+                    <div class="documentos"></div>
+                    <p class="editable textDocumentos">My Documents</p>
+                </div>
+            </div>
+            <div class="icon" id="cv">
+                <div class="icon-content">
+                    <div class="cv"></div>
+                    <p class="editable textCV">Resume.txt</p>
+                </div>
+            </div>
+            <div class="icon" id="winamp">
+                <div class="icon-content">
+                    <div class="winamp"></div>
+                    <p class="editable winampText">Winamp</p>
+                </div>
+            </div>
+            <div class="icon" id="papelera">
+                <div class="icon-content">
+                    <div class="papelera"></div>
+                    <p class="editable papeleraText">Recycle Bin</p>
+                </div>
+            </div>
+            <!-- Repite para cada ícono -->
+        </div>
+
+        <!--! C A R P E T A S -->
+        <div class="window ocultar window resizable" id="myDocumentsWindow"><!--! APLICAR "window resizable" a la carpeta que quiera que se pueda resizear.-->
+            <div class="title-bar">
+                <span class="title">Computer</span>
+                <div class="buttons">
+                    <button class="minimize">-</button>
+                    <button class="maximize">□</button>
+                    <button class="close">x</button>
+                </div>
+            </div>
+            <div class="menu-bar">
+                <ul>
+                    <li>File</li>
+                    <li>Edit</li>
+                    <li>View</li>
+                    <li>Help</li>
+                </ul>
+            </div>
+            <div class="content">
+                <!-- Aquí puedes agregar el contenido de la ventana -->
+            </div>
+            <div class="status-bar">
+            </div>
+        </div>
+
+        <!--! Contenido botón derecho -->
+        <div id="contextMenu" class="context-menu">
+            <ul>
+                <li id="About">About</li>
+                <li id="Paste">Paste</li>
+                <li id="pasteShorcut">Paste Shorcut</li>
+                <li id="undoDelete">Undo Delete</li>
+                <li id="new">New
+                    <ul class="submenu">
+                        <li id="newFolder">Folder</li>
+                        <li id="newTextDocument">Text Document</li>
+                    </ul>
+                </li>
+                <li id="properties">Properties</li>
+                <!-- Agrega más opciones aquí -->
+            </ul>
+        </div>
+
+        
+        
+
+        
+    </main>
+
+    <footer class="align-tb">
+        <!--Footer Area-->
+        <div class="taskbar">
+            <div class="botonstart"></div>
+        </div>
+    </footer>
+    
+    <!-- script -->
+        <!--! web winamp -->
+        <script src="https://unpkg.com/webamp"></script>
+        <script src="../script/winamp.js"></script>
+        <!--! web winamp -->
+    <script src="../script/barraInicio.js"></script>
+    <script src="../script/desktop.js"></script>
+    <script src="../script/editarNombreIconos.js"></script>
+    <script src="../script/botonDerecho.js"></script>
+
+
+
+
+    
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!-- 
+bien, ahora quiero emular el boton derecho de windows 95 al hacer click en el escritorio. Pero con las opciones de 
+
+"Nuevo" 
+> "Documento de Texto"
+> "Nueva Carpeta"
+> "Configuración" (Este luego lo trabajaremos) -->

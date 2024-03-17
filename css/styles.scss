@@ -1,0 +1,24 @@
+@import "./partials/variables";
+@import "./partials/reset";
+@import "./partials/main";
+@import "./partials/header";
+@import "./partials/footer";
+@import "./partials/background";
+@import "./partials/desktop";
+@import "./partials/mouseRightClick";
+@import "./partials/carpetas";
+
+@font-face {
+    font-family: "W95FA.otf";
+    src: url(../fonts/W95FA.otf);
+}
+
+@font-face {
+    font-family: "font-1";
+    src: url(../fonts/rm_typerighter_old.ttf);
+}
+
+@font-face {
+    font-family: "font-2";
+    src: url(../fonts/bohemian-typewriter.ttf);
+}

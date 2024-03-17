@@ -1,0 +1,485 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.titulo-main {
+  font-family: "font-2";
+  font-size: 20px;
+}
+
+.index-body {
+  background-image: url("../img/backOFF!!!.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #000000;
+  margin-top: 45%;
+}
+
+#gabinete {
+  position: absolute;
+  top: 10%;
+  left: 30%;
+  right: 30%;
+  bottom: 10%;
+  height: 100%;
+  cursor: url("pointer.png"), auto;
+}
+
+.table-Index {
+  width: 100%;
+  border: 2px solid #808080;
+}
+
+.table-Index tr {
+  height: 50px;
+}
+
+.table-Index td {
+  background-color: #c0c0c0;
+  border-collapse: collapse;
+  font-family: "W95FA.otf";
+  font-size: larger;
+}
+
+.table-Index {
+  border: 2px solid #808080;
+}
+
+.iconprograms {
+  width: 80px;
+  margin-left: 10px;
+  background-image: url("../img/8-programs.ico");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.desktop {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100vh; /* Ajusta esto a la altura de tu "escritorio" */
+}
+
+.icon {
+  position: relative;
+  width: 80px;
+  height: 50px;
+  margin-bottom: 2rem; /* Ajusta esto al espacio que quieres entre los íconos */
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+
+.myPC {
+  background-image: url("../img/desktopIcons/computer_explorer.png");
+  background-repeat: no-repeat;
+  cursor: pointer;
+  height: 48px;
+  background-position: center;
+}
+
+.documentos {
+  background-image: url("../img/desktopIcons/directory_open_file.png");
+  background-repeat: no-repeat;
+  cursor: pointer;
+  height: 48px;
+  background-position: center;
+}
+
+.cv {
+  background-image: url("../img/desktopIcons/write_wordpad-1.png");
+  background-repeat: no-repeat;
+  cursor: pointer;
+  height: 48px;
+  background-position: center;
+}
+
+.papelera {
+  background-image: url("../img/desktopIcons/recycle_bin_empty.png");
+  background-repeat: no-repeat;
+  cursor: pointer;
+  height: 48px;
+  background-position: center;
+}
+
+.winamp {
+  background-image: url("../img/desktopIcons/winamp.png");
+  background-repeat: no-repeat;
+  background-size: 48px 48px; /* Ajusta el tamaño de la imagen de fondo */
+  background-position: center;
+  cursor: pointer;
+  height: 48px; /* Asegúrate de que el elemento tenga el tamaño adecuado */
+}
+
+.textMyPc, .textDocumentos, .textCV, .papeleraText, .winampText {
+  text-align: center;
+  background-color: #007E73;
+  color: white;
+  padding-top: 4px;
+}
+
+.padding {
+  padding-bottom: 3rem;
+}
+
+.editable:hover {
+  cursor: pointer;
+}
+
+.active .icon-content, .active .editable {
+  /* border: 1px dotted #808080; Borde de puntos de color gris */
+  cursor: pointer;
+  background-color: #0a2c70;
+}
+
+.editable[contentEditable=true] {
+  background-color: #007E73;
+  cursor: text;
+}
+
+.winamPosition {
+  margin-top: 25rem;
+  margin-left: 25rem;
+  position: absolute;
+}
+
+.programs {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.icondocuments {
+  width: 50px;
+  margin-left: 10px;
+  background-image: url("../img/7-documents.ico");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.documents {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.iconsettings {
+  width: 50px;
+  margin-left: 10px;
+  background-image: url("../img/6-settings.ico");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.settings {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.iconfind {
+  width: 50px;
+  margin-left: 10px;
+  background-image: url("../img/5-find.ico");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.find {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.iconhelp {
+  width: 50px;
+  margin-left: 10px;
+  background-image: url("../img/4-help.ico");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.help {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.iconrun {
+  width: 50px;
+  margin-left: 10px;
+  background-image: url("../img/3-run.ico");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.run {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.iconsuspend {
+  width: 50px;
+  margin-left: 10px;
+  background-image: url("../img/2-suspend.ico");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.suspend {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.mouseConfig {
+  cursor: pointer;
+}
+
+.mouseConfig:hover,
+.mouseConfig:hover td {
+  background-color: #3563be;
+}
+
+.iconshutDown {
+  width: 50px;
+  margin-left: 10px;
+  background-image: url("../img/1-shutDown.ico");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.shutDown {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.tasktabindex {
+  position: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  left: 0;
+  bottom: 0;
+  background-size: 100%;
+  width: 243px;
+  height: 401px;
+  margin-bottom: 47px;
+  display: none; /* Oculta el div inicialmente */
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.desktopbgn {
+  position: relative;
+  background-image: url("../img/clouds.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.taskbar {
+  position: fixed;
+  bottom: 0;
+  background-color: #c0c0c0;
+  width: 100%;
+  min-height: 3rem;
+  border: 2px solid #979797;
+  border-radius: 3px;
+}
+
+.botonstart {
+  position: fixed;
+  background-image: url("../img/startb.png");
+  background-repeat: no-repeat;
+  background-size: 100px;
+  left: 0;
+  bottom: 0;
+  margin-left: 2px;
+  margin-top: 3px;
+  width: 100px;
+  height: 42px;
+  cursor: pointer;
+}
+
+.botonstart:hover {
+  background-image: url("../img/start-mouseup.png");
+}
+
+.botonstart:active {
+  background-image: url("../img/startb-push.png");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.context-menu, .context-menu .submenu {
+  display: none;
+  position: absolute;
+  background-color: #c0c0c0;
+  border: none;
+  z-index: 1000;
+  font-family: "MS Sans Serif", Geneva, sans-serif;
+  font-size: 12px;
+  width: 9rem;
+  box-shadow: -1px -1px 1px #ffffff, 2px 2px 2px #575757;
+  color: black;
+}
+
+.context-menu ul, .context-menu .submenu ul {
+  list-style: none;
+}
+
+.context-menu li, .context-menu .submenu li {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.context-menu li:hover, .context-menu .submenu li:hover {
+  background-color: #000080;
+  color: #fff;
+}
+
+#new .submenu {
+  position: absolute;
+  top: 68%;
+  left: 101.5%;
+}
+
+#new:hover .submenu {
+  display: block;
+}
+
+#new::after {
+  content: "▶";
+  float: right;
+}
+
+#About + li,
+#undoDelete + li {
+  border-top: 1px solid #8c8c8c;
+  box-shadow: inset 0 1px 0 #ffffff;
+}
+
+#Paste,
+#pasteShorcut,
+#undoDelete {
+  color: #8c8c8c;
+  text-shadow: -0.5px -0.5px 0 #ffffff, 1px 1px 0 rgba(255, 255, 255, 0.2745098039);
+  pointer-events: none;
+}
+
+.window {
+  position: absolute;
+  width: 640px;
+  height: 480px;
+  background: #C0C0C0;
+  padding-top: 4px;
+  padding-left: 6px;
+  padding-right: 6px;
+  font-family: "MS Sans Serif", sans-serif;
+  top: 4rem;
+  left: 15rem;
+  min-width: 230px; /* Mínimo ancho */
+  min-height: 110px; /* Mínimo alto */
+  box-shadow: -1px -1px 1px #ffffff, 2px 2px 2px #575757;
+  color: black;
+}
+
+.resizable {
+  resize: both;
+  overflow: auto;
+}
+
+.ocultar {
+  display: none;
+}
+
+.title-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #787a74;
+  color: #FFF;
+  padding: 2px;
+}
+
+.title-bar .title {
+  margin-left: 2px;
+}
+
+.title-bar .buttons {
+  display: flex;
+}
+
+.title-bar .buttons button {
+  width: 20px;
+  height: 20px;
+  border: none;
+  color: #000;
+  background: #C0C0C0;
+}
+
+.menu-bar {
+  background: #C0C0C0;
+  padding: 2px;
+}
+
+.menu-bar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.minimize {
+  font-size: 18px;
+}
+
+.maximize {
+  font-size: 17px;
+  margin-left: 3px;
+}
+
+.close {
+  font-size: 18px;
+  margin-left: 3px;
+}
+
+.menu-bar ul li {
+  margin-right: 4px;
+}
+
+.content {
+  background: #FFFFFF;
+  height: calc(100% - 52px);
+  padding: 2px;
+}
+
+.status-bar {
+  background: #C0C0C0;
+  padding: 2px;
+}
+
+.title-bar .buttons button {
+  cursor: pointer;
+  top: 0;
+}
+
+@font-face {
+  font-family: "W95FA.otf";
+  src: url(../fonts/W95FA.otf);
+}
+@font-face {
+  font-family: "font-1";
+  src: url(../fonts/rm_typerighter_old.ttf);
+}
+@font-face {
+  font-family: "font-2";
+  src: url(../fonts/bohemian-typewriter.ttf);
+}/*# sourceMappingURL=styles.css.map */

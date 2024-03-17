@@ -1,0 +1,295 @@
+//?INICIO DE WIN 95
+
+//!SUPERPOSICIÓN DE BLUE COLOR EN LA BARRA DE INICIO
+.table-Index {
+    width: 100%;
+    border: 2px solid #808080;
+}
+
+.table-Index tr {
+    height: 50px;
+}
+
+.table-Index td {
+    background-color: #c0c0c0;
+    border-collapse: collapse;
+    font-family: "W95FA.otf";
+    font-size: larger;
+}
+
+.table-Index {
+    border: 2px solid #808080;
+    }
+
+    .iconprograms {
+        width: 80px;
+        margin-left: 10px;
+        background-image: url('../img/8-programs.ico');
+        background-repeat: no-repeat;
+        background-position: center;
+        }
+
+//! ORGANIZAR ÍCONOS AUTOMATICAMENTE SEGUN LA VARIABLE DE LOS ÍCOONOS CREADOS
+.desktop {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100vh; /* Ajusta esto a la altura de tu "escritorio" */
+}
+
+.icon {
+    position: relative;
+    width: 80px;
+    height: 50px;
+    margin-bottom: 2rem; /* Ajusta esto al espacio que quieres entre los íconos */
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+
+.myPC{
+    background-image: url('../img/desktopIcons/computer_explorer.png');
+    background-repeat: no-repeat;
+    cursor:pointer;
+    height: 48px;
+    background-position: center;
+}
+
+.documentos{
+    background-image: url('../img/desktopIcons/directory_open_file.png');
+    background-repeat: no-repeat;
+    cursor:pointer;
+    height: 48px;
+    background-position: center;
+}
+
+.cv {
+    background-image: url('../img/desktopIcons/write_wordpad-1.png');
+    background-repeat: no-repeat;
+    cursor:pointer;
+    height: 48px;
+    background-position: center;
+}
+
+.papelera {
+    background-image: url('../img/desktopIcons/recycle_bin_empty.png');
+    background-repeat: no-repeat;
+    cursor:pointer;
+    height: 48px;
+    background-position: center;
+}
+
+.winamp {
+    background-image: url('../img/desktopIcons/winamp.png');
+    background-repeat: no-repeat;
+    background-size: 48px 48px; /* Ajusta el tamaño de la imagen de fondo */
+    background-position: center;
+    cursor: pointer;
+    height: 48px; /* Asegúrate de que el elemento tenga el tamaño adecuado */
+}
+
+
+.textMyPc, .textDocumentos, .textCV, .papeleraText, .winampText {
+    text-align: center;
+    background-color: #007E73;
+    color: white;
+    padding-top:4px;
+}
+
+.padding {
+    padding-bottom: 3rem;
+}
+
+.editable:hover {
+    cursor: pointer;
+}
+
+.active .icon-content, .active .editable {
+    /* border: 1px dotted #808080; Borde de puntos de color gris */
+    cursor: pointer;
+    background-color: #0a2c70;
+}
+
+.editable[contentEditable="true"] {
+    background-color: #007E73;
+    cursor:text;
+}
+
+//!Winamp position:
+.winamPosition {
+    margin-top: 25rem;
+    margin-left: 25rem;
+    position: absolute;
+}
+
+//! Config gral
+.programs{
+    text-align: left;
+    padding-left: 10px;
+}
+
+.icondocuments {
+    width: 50px;
+    margin-left: 10px;
+    background-image: url('../img/7-documents.ico');
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+
+.documents{
+    text-align: left;
+    padding-left: 10px;
+}
+
+.iconsettings {
+    width: 50px;
+    margin-left: 10px;
+    background-image: url('../img/6-settings.ico');
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+
+.settings{
+    text-align: left;
+    padding-left: 10px;
+}
+
+.iconfind {
+    width: 50px;
+    margin-left: 10px;
+    background-image: url('../img/5-find.ico');
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+
+.find{
+    text-align: left;
+    padding-left: 10px;
+}
+
+.iconhelp {
+    width: 50px;
+    margin-left: 10px;
+    background-image: url('../img/4-help.ico');
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+
+.help{
+    text-align: left;
+    padding-left: 10px;
+}
+
+.iconrun {
+    width: 50px;
+    margin-left: 10px;
+    background-image: url('../img/3-run.ico');
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+
+.run{
+    text-align: left;
+    padding-left: 10px;
+}
+
+.iconsuspend {
+    width: 50px;
+    margin-left: 10px;
+    background-image: url('../img/2-suspend.ico');
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+
+.suspend{
+    text-align: left;
+    padding-left: 10px;
+}
+
+.mouseConfig {
+    cursor: pointer;
+}
+
+.mouseConfig:hover,
+.mouseConfig:hover td {
+    background-color: #3563be;
+}
+
+.iconshutDown {
+    width: 50px;
+    margin-left: 10px;
+    background-image: url('../img/1-shutDown.ico');
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+
+.shutDown {
+    text-align: left;
+    padding-left: 10px;
+}
+
+//!BARRA DE BUSQUEDA WINDOWS
+.tasktabindex {
+    position: fixed;
+    // background-image: url('../img/task-seccion.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 0;
+    bottom: 0;
+    background-size: 100%;
+    width: 243px;
+    height: 401px;
+    margin-bottom: 47px;
+    display: none; /* Oculta el div inicialmente */
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+//! BARRA DE ESCRITORIO (BARRA DE TAREAS)
+.desktopbgn {
+    position: relative;
+    background-image: url('../img/clouds.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+//! BARRA DE ESCRITORIO (BOTON INICIO)
+.taskbar {
+    position:fixed;
+    bottom: 0;
+    background-color: #c0c0c0;
+    width: 100%;
+    min-height: 3rem;
+    border: 2px solid #979797;
+    border-radius: 3px;
+}
+
+.botonstart {
+    position: fixed;
+    background-image: url('../img/startb.png');
+    background-repeat: no-repeat;
+    background-size: 100px;
+    left: 0;
+    bottom: 0;
+    margin-left: 2px;
+    margin-top: 3px;
+    width: 100px;
+    height: 42px;
+    cursor: pointer;
+}
+
+.botonstart:hover {
+    background-image: url('../img/start-mouseup.png');
+}
+
+.botonstart:active {
+    background-image: url('../img/startb-push.png');
+}
