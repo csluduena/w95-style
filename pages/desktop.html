@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desktop</title>
     <link rel="stylesheet" href="../css/styles.css">
+    
 
 </head>
 <body class="desktopbgn">
@@ -16,7 +17,10 @@
         <!--Main Area-->
         <!--! web winamp -->
         <div id="app" class="winamPosition"></div>
+        <!--! web notepad -->
         
+
+        <!--! INICIO WINDOWS-->
         <div id="tasktabindex" class="tasktabindex">
             <table class="table-Index">
                 <tr class="mouseConfig">
@@ -67,33 +71,85 @@
             <div class="icon folder" id="myPC">
                 <div class="icon-content">
                     <div class="myPC"></div>
-                    <p class="editable textMyPc">My Computer</p>
+                    <p class="editable myPcText">My Computer</p>
                 </div>
             </div>
             <div class="icon folder" id="documentos">
                 <div class="icon-content">
                     <div class="documentos"></div>
-                    <p class="editable textDocumentos">My Documents</p>
+                    <p class="editable documentosText">My Documents</p>
                 </div>
             </div>
+
+
+
+            <!--! Icono Resume -->
             <div class="icon" id="cv">
                 <div class="icon-content">
                     <div class="cv"></div>
-                    <p class="editable textCV">Resume.txt</p>
+                    <p class="editable cvText">Resume.txt</p>
                 </div>
             </div>
-            <div class="icon folder" id="mp3">
+            <!--! Ventana Resume -->
+            <div class="windowRE noIcon resizableRE" id="resume">
+                <div class="title-bar">
+                    <span class="title resume">Resume.txt</span>
+                    <div class="buttons">
+                        <button class="close">x</button>
+                    </div>
+                </div>
+                <div class="contentRE">
+                    <iframe class="iframeRE" id="pdfViewer" src="../img/personalResume.pdf#zoom=37" frameborder="0"></iframe>
+                </div>
+            </div>
+
+            <!--! MP3 folder (ocultada)-->
+                <!-- <div class="icon folder" id="mp3">
+                    <div class="icon-content">
+                        <div class="mp3"></div>
+                        <p class="editable mp3Text">Mp3</p>
+                    </div>
+                </div> -->
+            <!--! Icono Notepad -->
+            <div class="icon" id="notepad">
                 <div class="icon-content">
-                    <div class="mp3"></div>
-                    <p class="editable textMp3">Mp3</p>
+                    <div class="notepad"></div>
+                    <p class="title editable notepadText">Notepad</p>
                 </div>
             </div>
+            <!--! Icono Notepad -->
+            <div id="notepadWindow" class="windowNotepad resizableNotepad" style="display: none;">
+                <div class="title-bar">
+                    <span class="title">Notepad</span>
+                    <div class="buttons">
+                        <button class="minimize">-</button>
+                        <button class="maximize">□</button>
+                        <button class="close">x</button>
+                    </div>
+                </div>
+                <div class="contentNotepad">
+                    <iframe class="iframeNotepad" src="https://98.js.org/programs/notepad/" frameborder="0"></iframe>
+                </div>
+            </div>
+            <!--! Icono WINAMP -->
             <div class="icon" id="winamp">
                 <div class="icon-content">
                     <div class="winamp"></div>
                     <p class="editable winampText">Winamp</p>
                 </div>
             </div>
+
+
+
+
+
+
+
+
+
+
+            
+            <!--! Icono Papelera -->
             <div class="icon" id="papelera">
                 <div class="icon-content">
                     <div class="papelera"></div>
@@ -103,7 +159,7 @@
             <!-- Repite para cada ícono -->
         </div>
 
-        <!--! C A R P E T A S -->
+        <!--! V E N T A N A     C F G -->
         <div class="window ocultar window resizable" id="myDocumentsWindow"><!--! APLICAR "window resizable" a la carpeta que quiera que se pueda resizear.-->
             <div class="title-bar">
                 <span class="title">Computer</span>
@@ -128,6 +184,9 @@
             </div>
         </div>
 
+
+
+
         <!--! Contenido botón derecho -->
         <div id="contextMenu" class="context-menu">
             <ul>
@@ -142,54 +201,45 @@
                     </ul>
                 </li>
                 <li id="properties">Properties</li>
-                <!-- Agrega más opciones aquí -->
             </ul>
         </div>
 
-        
-        
 
-        
+
+
+
+
+
+
+
     </main>
-
     <footer class="align-tb">
         <!--Footer Area-->
         <div class="taskbar">
             <div class="botonstart"></div>
+            <div class="time">
+                <span class="time">HORA CONFIG</span>
+            </div>
         </div>
     </footer>
     
     <!-- script -->
+        <!--! web Notepad -->
+        <script src="https://98.js.org/programs/notepad/"></script>
+        <script src="../script/notepad.js"></script>
         <!--! web winamp -->
         <script src="https://unpkg.com/webamp"></script>
         <script src="../script/winamp.js"></script>
-        <!--! web winamp -->
+        <!--! Local Scripts-->
     <script src="../script/barraInicio.js"></script>
     <script src="../script/desktop.js"></script>
     <script src="../script/editarNombreIconos.js"></script>
     <script src="../script/botonDerecho.js"></script>
-
-
-
+    <script src="../script/botonYBarraTareas.js"></script>
+    <script src="../script/resume.js"></script>
+    <script src="../script/mp3.js"></script>
 
     
 
-
-
 </body>
 </html>
-
-
-
-
-
-
-
-
-<!-- 
-bien, ahora quiero emular el boton derecho de windows 95 al hacer click en el escritorio. Pero con las opciones de 
-
-"Nuevo" 
-> "Documento de Texto"
-> "Nueva Carpeta"
-> "Configuración" (Este luego lo trabajaremos) -->

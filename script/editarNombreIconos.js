@@ -1,11 +1,12 @@
 //!Permitir editar el nombre de los íconos
 
-let nombresPredeterminados = {
-    'textMyPc': 'My Computer',
-    'textDocumentos': 'My Documents',
-    'textCV': 'Resume.txt',
-    'mp3Text': 'mp3',
-    'winampText': 'Winamp',
+var nombresPredeterminados = {
+    'myPcText': 'My Computer',
+    'documentosText': 'My Documents',
+    'cvText': 'Resume.txt',
+    'textMp3': 'MP3',
+    'winampText' : 'Winamp',
+    'notepadText': 'Notepad',
     'papeleraText': 'Recycle Bin'
 };
 

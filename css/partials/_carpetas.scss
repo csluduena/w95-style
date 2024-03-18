@@ -15,6 +15,15 @@
     box-shadow: -1px -1px 1px #ffffff, 2px 2px 2px #575757;
     color: black;
 }
+
+#song {
+    position: absolute; /* Esto posiciona el archivo en relación a la ventana */
+    top: 50px; /* Esto posiciona el archivo hacia abajo desde la parte superior de la ventana */
+    left: 50px; /* Esto posiciona el archivo hacia la derecha desde el lado izquierdo de la ventana */
+    /* Aquí puedes agregar el resto de tus estilos para el archivo mp3 */
+}
+
+
 //! APLICAR "window resizable" a la carpeta que quiera que se pueda resizear.
 .resizable {
     resize: both;
@@ -95,8 +104,9 @@
     padding: 2px;
 }
 
-//! Config Maximizar, Minimizar, cerrar de ventana.
+// //! Config Maximizar, Minimizar, cerrar de ventana.
 .title-bar .buttons button {
     cursor: pointer;
     top:0;
 }
+

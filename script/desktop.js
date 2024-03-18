@@ -1,3 +1,5 @@
+
+
 //! Selección de íconos
 document.querySelectorAll('.icon').forEach(function(el) {
     el.addEventListener('click', function(event) {
@@ -120,35 +122,34 @@ maximizeButton.addEventListener('click', function() {
     }
 });
 
-//! segunda parte del codigo RESIZE
-let resizableWindows = document.querySelectorAll('.resizable');
-    resizableWindows.forEach(function(windowElement) {
-        let resizing = false;
-        let resizeOffsetX, resizeOffsetY;
+//! RESIZE SI SE HIZO CLICK CERCA DEL BORDE DE LA CARPETA (DESHABILITADO POR EL MOMENTO)
+// let resizableWindows = document.querySelectorAll('.resizable');
+//     resizableWindows.forEach(function(windowElement) {
+//         let resizing = false;
+//         let resizeOffsetX, resizeOffsetY;
 
-        windowElement.addEventListener('mousedown', function(event) {
-            // Comprueba si el clic ocurrió cerca de cualquier borde de la ventana
-            if (event.clientX > windowElement.offsetLeft && event.clientX < windowElement.offsetLeft + windowElement.offsetWidth &&
-                event.clientY > windowElement.offsetTop && event.clientY < windowElement.offsetTop + windowElement.offsetHeight) {
-                resizing = true;
-                resizeOffsetX = event.clientX - windowElement.offsetWidth;
-                resizeOffsetY = event.clientY - windowElement.offsetHeight;
-            }
-        });
+//         windowElement.addEventListener('mousedown', function(event) {
+//             if (event.clientX > windowElement.offsetLeft && event.clientX < windowElement.offsetLeft + windowElement.offsetWidth &&
+//                 event.clientY > windowElement.offsetTop && event.clientY < windowElement.offsetTop + windowElement.offsetHeight) {
+//                 resizing = true;
+//                 resizeOffsetX = event.clientX - windowElement.offsetWidth;
+//                 resizeOffsetY = event.clientY - windowElement.offsetHeight;
+//             }
+//         });
 
-        document.addEventListener('mouseup', function() {
-            resizing = false;
-        });
+//         document.addEventListener('mouseup', function() {
+//             resizing = false;
+//         });
 
-        document.addEventListener('mousemove', function(event) {
-            if (resizing) {
-                const width = event.clientX - windowElement.offsetLeft - resizeOffsetX;
-                const height = event.clientY - windowElement.offsetTop - resizeOffsetY;
-                windowElement.style.width = width + 'px';
-                windowElement.style.height = height + 'px';
-            }
-        });
-    });
+//         document.addEventListener('mousemove', function(event) {
+//             if (resizing) {
+//                 const width = event.clientX - windowElement.offsetLeft - resizeOffsetX;
+//                 const height = event.clientY - windowElement.offsetTop - resizeOffsetY;
+//                 windowElement.style.width = width + 'px';
+//                 windowElement.style.height = height + 'px';
+//             }
+//         });
+//     });
 
 
 //! Crear Carpetas y TXT
@@ -163,4 +164,5 @@ document.getElementById('newTextDocument').addEventListener('click', function() 
 
 
 
-//! MP3
+//! Hora
+

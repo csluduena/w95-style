@@ -67,9 +67,10 @@
 }
 
 .cv {
-    background-image: url('../img/desktopIcons/write_wordpad-1.png');
+    background-image: url('../img/desktopIcons/w95_2.ico');
     background-repeat: no-repeat;
     cursor:pointer;
+    background-size: 46px 46px; /* Ajusta el tamaño de la imagen de fondo */
     height: 48px;
     background-position: center;
 }
@@ -78,8 +79,19 @@
     background-image: url('../img/desktopIcons/cxcc.png');
     background-repeat: no-repeat;
     cursor:pointer;
+    background-size: 46px 46px; /* Ajusta el tamaño de la imagen de fondo */
+    height: 48px;
+    margin-bottom: 2px;
+    background-position: center;
+}
+
+.notepad{
+    background-image: url('../../img/desktopIcons/notepad-2.png');
+    background-repeat: no-repeat;
+    cursor:pointer;
     background-size: 48px 48px; /* Ajusta el tamaño de la imagen de fondo */
     height: 48px;
+    margin-bottom: 2px;
     background-position: center;
 }
 
@@ -100,7 +112,7 @@
     background-position: center;
 }
 
-.defaultText, .textMyPc, .textDocumentos, .textCV, .papeleraText, .winampText, .textMp3 {
+.defaultText, .myPcText, .documentosText, .cvText, .mp3Text, .notepadText, .winampText, .papeleraText {
     text-align: center;
     background-color: #007E73;
     color: white;
@@ -131,6 +143,7 @@
     margin-top: 25rem;
     margin-left: 25rem;
     position: absolute;
+    //background-size: 20rem 20rem;
 }
 
 //! Config gral
@@ -241,6 +254,7 @@
 
 //!BARRA DE BUSQUEDA WINDOWS
 .tasktabindex {
+    z-index: 500;
     position: fixed;
     // background-image: url('../img/task-seccion.png');
     background-repeat: no-repeat;
@@ -250,7 +264,7 @@
     background-size: 100%;
     width: 243px;
     height: 401px;
-    margin-bottom: 47px;
+    margin-bottom: 43px;
     display: none; /* Oculta el div inicialmente */
 }
 
@@ -275,27 +289,30 @@
 
 //! BARRA DE ESCRITORIO (BOTON INICIO)
 .taskbar {
+    z-index: 1000;
+    height: 46px;
     position:fixed;
     bottom: 0;
     background-color: #c0c0c0;
     width: 100%;
-    min-height: 3rem;
-    border: 2px solid #979797;
-    border-radius: 3px;
+    min-height: 2rem;
+    //border: 2px solid #979797;
+    //border-radius: 3px;
 }
 
 .botonstart {
     position: fixed;
     background-image: url('../img/startb.png');
     background-repeat: no-repeat;
-    background-size: 100px;
+    
     left: 0;
     bottom: 0;
-    margin-left: 2px;
-    margin-top: 3px;
+    margin-left: 5px;
+    margin-bottom: 2px;
     width: 100px;
-    height: 42px;
+    height: 40px;
     cursor: pointer;
+    background-size: 100px;
 }
 
 .botonstart:hover {
@@ -305,3 +322,242 @@
 .botonstart:active {
     background-image: url('../img/startb-push.png');
 }
+
+//!Hora
+.time {
+    display: flex;
+    justify-content: flex-end;
+    font-size: .65rem;
+    border-top: 1px solid #a3a3a3;
+    border-left: 1px solid #767676;
+    border-right: 1px solid #FCFCFC;
+    border-bottom: 1px solid #FCFCFC;
+    padding: 8px 15px;
+    
+}
+
+//? NOTEPAD STYLES
+
+.resizableNotepad {
+    resize: both;
+    overflow: auto;
+}
+
+.windowNotepad {
+    z-index: 300;
+    position: absolute;
+    width: 640px;
+    height: 480px;
+    background: #C0C0C0;
+    padding-top: 4px;
+    padding-left: 6px;
+    padding-right: 6px;
+    font-family: 'MS Sans Serif', sans-serif;
+    top: 4rem;
+    left: 15rem;
+    min-width: 230px; /* Mínimo ancho */
+    min-height: 110px; /* Mínimo alto */
+    box-shadow: -1px -1px 1px #ffffff, 2px 2px 2px #575757;
+    color: black;
+}
+
+.contentNotepad {
+    background: #FFFFFF;
+    height: calc(100% - 52px);
+    //padding: 2px;
+    //box-shadow: -1px -1px 1px #949593, 2px 2px 2px #989a95;
+    color: black;
+    border-radius: 2px;
+    border: 1px solid #afb1ae;
+}
+
+.iframeNotepad {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Oculta el desbordamiento por defecto */
+}
+
+/* Cuando el contenido se extiende hacia la izquierda */
+.iframeNotepad.extended-left {
+    overflow-x: auto; /* Muestra el desbordamiento solo cuando se extiende hacia la izquierda */
+}
+
+/* Cuando el contenido se extiende hacia abajo */
+.iframeNotepad.extended-down {
+    overflow-y: auto; /* Muestra el desbordamiento solo cuando se extiende hacia abajo */
+}
+
+//TODO RESUME (CV)
+
+.windowRE {
+    position: absolute;
+    z-index: 300;
+    width: 640px;
+    height: 907px;
+    background: #C0C0C0;
+    padding-top: 4px;
+    padding-left: 6px;
+    padding-right: 6px;
+    font-family: 'MS Sans Serif', sans-serif;
+    top: 4rem;
+    left: 15rem;
+    min-width: 230px; /* Mínimo ancho */
+    min-height: 110px; /* Mínimo alto */
+    box-shadow: -1px -1px 1px #ffffff, 2px 2px 2px #575757;
+    color: black;
+    top:-30px;
+}
+
+.title-barRE {
+    background-color: #808080;
+    color: #fff;
+    padding: 5px;
+    cursor: move; /* Permitir arrastrar la ventana */
+}
+
+.contentRE {
+    background: #FFFFFF;
+    height: calc(100% - 52px);
+    //padding: 2px;
+    //box-shadow: -1px -1px 1px #949593, 2px 2px 2px #989a95;
+    color: black;
+    border-radius: 2px;
+    border: 1px solid #afb1ae;
+}
+
+.resizableRE {
+    resize: both;
+    overflow: auto;
+}
+
+.iframeRE {
+    width: 100%;
+    height: 100%;
+    border: none; /* Eliminar borde del iframe */
+}
+
+#resume {
+    display: none; /* Ocultar la ventana de PDF inicialmente */
+}
+
+#pdfViewer {
+    width: 100%;
+    height: 100%;
+}
+
+.noIcon {
+    top:0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .subfolder {
+//     margin-top: 10px;
+//     display: none; /* Inicialmente oculta la carpeta */
+// }
+
+// .subfolder img {
+//     width: 40px; /* Ajusta el tamaño del icono de la carpeta */
+//     height: 40px;
+// }
+
+// .subfolder span {
+//     font-size: 12px; /* Ajusta el tamaño del texto */
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .notepadWindow {
+//     display: none;
+//     position: absolute;
+//     top: 50px;
+//     left: 50px;
+//     width: 300px;
+//     height: 400px;
+//     background-color: white;
+//     border: 2px solid #000;
+// }
+
+// .title-barNotepad {
+//     background-color: #000;
+//     color: #fff;
+//     padding: 5px;
+//     cursor: move;
+// }
+
+// .contentNotepad {
+//     height: calc(100% - 30px);
+//     overflow-y: auto;
+// }
+
+// .buttonsNotepad {
+//     float: right;
+// }
+
+// .closeNotepad {
+//     background-color: #ff0000;
+//     color: #fff;
+//     border: none;
+//     padding: 3px 8px;
+//     cursor: pointer;
+// }
+
+// .close:hover {
+//     background-color: #cc0000;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
