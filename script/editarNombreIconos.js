@@ -7,7 +7,8 @@ var nombresPredeterminados = {
     'textMp3': 'MP3',
     'winampText' : 'Winamp',
     'notepadText': 'Notepad',
-    'papeleraText': 'Recycle Bin'
+    'papeleraText': 'Recycle Bin',
+    'buscaminasText': 'Buscaminas'
 };
 
 function agregarEventosAIconos() {

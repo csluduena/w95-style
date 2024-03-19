@@ -82,7 +82,7 @@
                     <p class="editable cvText">Resume.txt</p>
                 </div>
             </div>
-        <!--! Ventana Resume -->
+        <!--TODO Ventana Resume -->
             <div class="windowRE noIcon resizableRE" id="resume">
                 <div class="title-bar">
                     <span class="title resume">Resume.txt</span>
@@ -108,7 +108,7 @@
                     <p class="title editable notepadText">Notepad</p>
                 </div>
             </div>
-        <!--! ventana Notepad -->
+        <!--TODO ventana Notepad -->
             <div id="notepadWindow" class="windowNotepad resizableNotepad" style="display: none;">
                 <div class="title-bar">
                     <span class="title">Notepad</span>
@@ -129,35 +129,25 @@
                     <p class="editable winampText">Winamp</p>
                 </div>
             </div>
-            <!--! Icono Buscaminas -->
+        <!--! Icono Buscaminas -->
             <div class="icon" id="buscaminas">
                 <div class="icon-content">
                     <div class="buscaminas"></div>
-                    <p class="editable buscaminasText">Buscaminas</p>
+                    <p class="title editable buscaminasText">Buscaminas</p>
                 </div>
             </div>
-            
-            
-            
-
-
-
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <!--TODO Ventana Buscaminas -->
+            <div id="windowBMNA" class="window-BMNA moverVentana noresizableNotepad" style="display: none;">
+                <div class="title-bar">
+                    <span class="title">Buscaminas</span>
+                    <div class="buttons">
+                        <button class="close">x</button>
+                    </div>
+                </div>
+                <div class="contentBMNA">
+                    <iframe class="iframeBMNA" src="https://98.js.org/programs/minesweeper" frameborder="0"></iframe>
+                </div>
+            </div>
         <!--! Icono Papelera -->
             <div class="icon" id="papelera">
                 <div class="icon-content">
@@ -165,71 +155,30 @@
                     <p class="editable papeleraText">Recycle Bin</p>
                 </div>
             </div>
-            <!-- Repite para cada ícono -->
-
-
-
-
-
-
-        <!--! ventana Notepad -->
-            <!-- <div id="notepadWindow" class="windowNotepad resizableNotepad" style="display: none;">
+        <!--!Ventana Config -->
+            <div class="window ocultar window resizable" id="myDocumentsWindow"><!--APLICAR "window resizable" a la carpeta que quiera que se pueda resizear.-->
                 <div class="title-bar">
-                    <span class="title">Notepad</span>
+                    <span class="title">Computer</span>
                     <div class="buttons">
                         <button class="minimize">-</button>
                         <button class="maximize">□</button>
                         <button class="close">x</button>
                     </div>
                 </div>
-                <div class="contentNotepad">
-                    <iframe class="iframeNotepad" src="https://98.js.org/programs/notepad/" frameborder="0"></iframe>
+                <div class="menu-bar">
+                    <ul>
+                        <li>File</li>
+                        <li>Edit</li>
+                        <li>View</li>
+                        <li>Help</li>
+                    </ul>
                 </div>
-            </div> -->
-
-
-
-
-
-        <div id="notepadWindow" class="windowNotepad resizableNotepad" style="display: none;"></div>
-            <div class="title-bar">
-                <div class="buttons">
-                    <button class="minimize">-</button>
-                    <button class="maximize">□</button>
-                    <button class="close">x</button>
+                <div class="content">
+                    <!-- Aquí puedes agregar el contenido de la ventana -->
+                </div>
+                <div class="status-bar">
                 </div>
             </div>
-            <div id="windowBMNA" class="contentBMNA" style="display: none;">
-                <iframe class="iframeBMNA" src="https://98.js.org/programs/minesweeper" frameborder="0"></iframe>
-            </div>
-
-        </div>
-        
-
-    <!--!Ventana Config -->
-        <div class="window ocultar window resizable" id="myDocumentsWindow"><!--APLICAR "window resizable" a la carpeta que quiera que se pueda resizear.-->
-            <div class="title-bar">
-                <span class="title">Computer</span>
-                <div class="buttons">
-                    <button class="minimize">-</button>
-                    <button class="maximize">□</button>
-                    <button class="close">x</button>
-                </div>
-            </div>
-            <div class="menu-bar">
-                <ul>
-                    <li>File</li>
-                    <li>Edit</li>
-                    <li>View</li>
-                    <li>Help</li>
-                </ul>
-            </div>
-            <div class="content">
-                <!-- Aquí puedes agregar el contenido de la ventana -->
-            </div>
-            <div class="status-bar">
-            </div>
-        </div>
         <!--! Contenido botón derecho -->
         <div id="contextMenu" class="context-menu">
             <ul>

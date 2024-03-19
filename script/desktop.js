@@ -160,5 +160,41 @@ maximizeButton.addEventListener('click', function() {
 //     createFileOrFolder('New Text Document', 'text');
 // });
 
-//! Hora
+//TODO FUNCIÓN PARA MOVER VENTANAS. (Agregar "moverVentana" en la primer clase de la ventana y mantener luego el "title-bar")
+document.addEventListener('DOMContentLoaded', function() {
+    const moverVentanas = document.querySelectorAll('.moverVentana'); // Obtener todas las ventanas Notepad
+
+    // Iterar sobre cada ventana Notepad
+    moverVentanas.forEach(function(functionMover) {
+        const titleBar = functionMover.querySelector('.title-bar');
+        let isDragging = false;
+        let offsetX, offsetY;
+
+        titleBar.addEventListener('mousedown', function(event) {
+            // Calcular la posición inicial del mouse en relación con la ventana
+            offsetX = event.clientX - functionMover.offsetLeft;
+            offsetY = event.clientY - functionMover.offsetTop;
+            
+            // Habilitar el arrastre
+            isDragging = true;
+        });
+
+        document.addEventListener('mousemove', function(event) {
+            if (isDragging) {
+                // Calcular la nueva posición de la ventana en función del movimiento del mouse
+                const newLeft = event.clientX - offsetX;
+                const newTop = event.clientY - offsetY;
+
+                // Aplicar la nueva posición de la ventana
+                functionMover.style.left = newLeft + 'px';
+                functionMover.style.top = newTop + 'px';
+            }
+        });
+
+        document.addEventListener('mouseup', function(event) {
+            // Deshabilitar el arrastre cuando se suelta el botón del ratón
+            isDragging = false;
+        });
+    });
+});
 

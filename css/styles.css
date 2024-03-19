@@ -459,16 +459,39 @@
   top: 0;
 }
 
-.resizableBMNA {
+.resizable-BMNA {
   resize: both;
   overflow: auto;
 }
 
 .windowBMNA {
+  position: absolute;
+  z-index: 300;
+  width: 516px;
+  height: 379px;
+  background: #C0C0C0;
+  padding-top: 4px;
+  padding-left: 6px;
+  padding-right: 6px;
+  font-family: "MS Sans Serif", sans-serif;
+  top: 4rem;
+  left: 15rem;
+  min-width: 230px; /* Mínimo ancho */
+  min-height: 110px; /* Mínimo alto */
+  box-shadow: -1px -1px 1px #ffffff, 2px 2px 2px #575757;
+  color: black;
+  top: -30px;
+}
+
+.buttonsBMNA {
+  float: right;
+}
+
+.window-BMNA {
   z-index: 300;
   position: absolute;
-  width: 640px;
-  height: 480px;
+  width: 516px;
+  height: 379px;
   background: #C0C0C0;
   padding-top: 4px;
   padding-left: 6px;
@@ -484,13 +507,15 @@
 
 .contentBMNA {
   background: #FFFFFF;
-  height: calc(100% - 52px);
+  height: calc(100% - 32px);
   color: black;
   border-radius: 2px;
   border: 1px solid #afb1ae;
+  position: relative; /* Necesario para que el contenido relativo funcione */
 }
 
 .iframeBMNA {
+  background-color: #0a2c70;
   width: 100%;
   height: 100%;
   overflow: hidden; /* Oculta el desbordamiento por defecto */
@@ -504,6 +529,25 @@
 /* Cuando el contenido se extiende hacia abajo */
 .iframeBMNA.extended-down {
   overflow-y: auto; /* Muestra el desbordamiento solo cuando se extiende hacia abajo */
+}
+
+.title-barBMNA {
+  background-color: #808080;
+  color: #fff;
+  padding: 5px;
+  cursor: move; /* Permitir arrastrar la ventana */
+}
+
+.windowbuscaminas {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #000;
+  width: 400px;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
 }
 
 * {
