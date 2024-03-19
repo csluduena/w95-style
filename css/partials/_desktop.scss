@@ -86,7 +86,7 @@
 }
 
 .notepad{
-    background-image: url('../../img/desktopIcons/notepad-2.png');
+    background-image: url('../img/desktopIcons/notepad-2.png');
     background-repeat: no-repeat;
     cursor:pointer;
     background-size: 48px 48px; /* Ajusta el tamaño de la imagen de fondo */
@@ -104,6 +104,15 @@
     height: 48px; /* Asegúrate de que el elemento tenga el tamaño adecuado */
 }
 
+.buscaminas {
+    background-image: url('../img/desktopIcons/w98_game_mine_2.ico');
+    background-repeat: no-repeat;
+    background-size: 48px 48px; /* Ajusta el tamaño de la imagen de fondo */
+    background-position: center;
+    cursor: pointer;
+    height: 48px; /* Asegúrate de que el elemento tenga el tamaño adecuado */
+}
+
 .papelera {
     background-image: url('../img/desktopIcons/recycle_bin_empty.png');
     background-repeat: no-repeat;
@@ -112,7 +121,7 @@
     background-position: center;
 }
 
-.defaultText, .myPcText, .documentosText, .cvText, .mp3Text, .notepadText, .winampText, .papeleraText {
+.defaultText, .myPcText, .documentosText, .cvText, .mp3Text, .notepadText, .winampText, .papeleraText, .buscaminasText {
     text-align: center;
     background-color: #007E73;
     color: white;
@@ -336,7 +345,7 @@
     
 }
 
-//? NOTEPAD STYLES
+//! NOTEPAD STYLES
 
 .resizableNotepad {
     resize: both;
@@ -450,7 +459,56 @@
 }
 
 
+//! BUSCAMINAS STYLES
 
+.resizableBMNA {
+    resize: both;
+    overflow: auto;
+}
+
+.windowBMNA {
+    z-index: 300;
+    position: absolute;
+    width: 640px;
+    height: 480px;
+    background: #C0C0C0;
+    padding-top: 4px;
+    padding-left: 6px;
+    padding-right: 6px;
+    font-family: 'MS Sans Serif', sans-serif;
+    top: 4rem;
+    left: 15rem;
+    min-width: 230px; /* Mínimo ancho */
+    min-height: 110px; /* Mínimo alto */
+    box-shadow: -1px -1px 1px #ffffff, 2px 2px 2px #575757;
+    color: black;
+}
+
+.contentBMNA {
+    background: #FFFFFF;
+    height: calc(100% - 52px);
+    //padding: 2px;
+    //box-shadow: -1px -1px 1px #949593, 2px 2px 2px #989a95;
+    color: black;
+    border-radius: 2px;
+    border: 1px solid #afb1ae;
+}
+
+.iframeBMNA {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Oculta el desbordamiento por defecto */
+}
+
+/* Cuando el contenido se extiende hacia la izquierda */
+.iframeBMNA.extended-left {
+    overflow-x: auto; /* Muestra el desbordamiento solo cuando se extiende hacia la izquierda */
+}
+
+/* Cuando el contenido se extiende hacia abajo */
+.iframeBMNA.extended-down {
+    overflow-y: auto; /* Muestra el desbordamiento solo cuando se extiende hacia abajo */
+}
 
 
 

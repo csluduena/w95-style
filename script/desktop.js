@@ -22,7 +22,6 @@ document.addEventListener('click', function() {
 });
 
 //! V E N T A N A S
-
 const folders = document.querySelectorAll('.folder');
 
 folders.forEach(function(folder){
@@ -152,17 +151,14 @@ maximizeButton.addEventListener('click', function() {
 //     });
 
 
-//! Crear Carpetas y TXT
+//! Crear Carpetas y TXT (DESHABILITADO POR AHORA)
+// document.getElementById('newFolder').addEventListener('click', function() {
+//     createFileOrFolder('New Folder', 'folder');
+// });
 
-document.getElementById('newFolder').addEventListener('click', function() {
-    createFileOrFolder('New Folder', 'folder');
-});
-
-document.getElementById('newTextDocument').addEventListener('click', function() {
-    createFileOrFolder('New Text Document', 'text');
-});
-
-
+// document.getElementById('newTextDocument').addEventListener('click', function() {
+//     createFileOrFolder('New Text Document', 'text');
+// });
 
 //! Hora
 
